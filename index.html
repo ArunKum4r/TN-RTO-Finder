@@ -4,9 +4,60 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RTO Finder</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Oswald', sans-serif;
+                }
+    </style>
 </head>
-<body>
-    <h1>RTO Finder</h1>
+<body class="bg-gray-400">
+    <main>
+        <div class="h-64 bg-[#f2771a]">
+            <ul class="uppercase font-bold flex space-x-4 justify-end p-5 text-xs text-[#1c1919]">
+                <li class="hover:text-white" onclick="alert('Hey There! have a nice day \n\t\t\t\t\t\t\t- ArunKum4r')">ABOUT</li>
+                <li class="hover:text-white"><a href="https://github.com/ArunKum4r/TN-RTO-Finder">GITHUB</a></li>
+            </ul>
+            <div class="flex flex-col justify-center items-center space-y-5 py-5">
+                <h1 class="font-bold text-3xl">RTO FINDER</h1>
+                <div class="relative">
+                    <svg class="absolute top-1.5 left-0 right-0 text-gray-500 px-1" xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 20 20"><path fill="currentColor" fill-rule="evenodd" d="M8 4a4 4 0 1 0 0 8a4 4 0 0 0 0-8ZM2 8a6 6 0 1 1 10.89 3.476l4.817 4.817a1 1 0 0 1-1.414 1.414l-4.816-4.816A6 6 0 0 1 2 8Z" clip-rule="evenodd"/></svg>                    
+                    <input type="search" placeholder="Search number plate" class="text-sm pl-10 pr-5 py-2 rounded focus:outline-none uppercase placeholder:normal-case placeholder:tracking-normal tracking-widest">
+                </div>
+            </div>
+        </div>
+        <!-- RESULTS -->
+        <div id="resultSection" class="bg-[#1c1919] m-10 shadow text-[#f2771a] p-5 rounded hidden">
+            <span class="text-xs">Your Query: </span> <span id="query" class="font-semibold text-white tracking-widest">TN12</span>
+            <table class="my-5 w-full">
+                <tbody>
+                    <tr class="border p-2">
+                        <td class="border p-2 font-semibold w-10">ID</td>
+                        <td id="rto_id" class="border p-2 text-white">1</td>
+                    </tr>
+                    <tr class="border p-2">
+                        <td class="border p-2 font-semibold">Code</td>
+                        <td id="rto_code" class="border p-2 text-white">TN12</td>
+                    </tr>
+                    <tr class="border p-2">
+                        <td class="border p-2 font-semibold">Location</td>
+                        <td id="rto_loc" class="border p-2 text-white">Poonamallee RTO</td>
+                    </tr>
+                    <tr class="border p-2">
+                        <td class="border p-2 font-semibold">Type</td>
+                        <td id="type" class="border p-2 text-white">RTO</td>
+                    </tr>
+                    <tr class="border p-2">
+                        <td class="border p-2 font-semibold">District</td>
+                        <td id="district" class="border p-2 text-white">Chennai</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
 
     <script src="./assets/js/main.js"></script>
 </body>
